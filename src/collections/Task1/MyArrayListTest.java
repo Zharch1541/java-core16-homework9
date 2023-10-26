@@ -1,4 +1,6 @@
-package collections;
+package collections.Task1;
+
+import collections.Task1.MyArrayList;
 
 public class MyArrayListTest {
     public static void main(String[] args) {
@@ -12,9 +14,9 @@ public class MyArrayListTest {
         System.out.println("mylist = " + mylist);
 
         System.out.println("list size = " + mylist.size());
-        System.out.println("element by index = " + mylist.get(0));
+        System.out.println("element by index = " + mylist.get(2));
 
-        System.out.println("removed element by index = " + mylist.remove(2));
+        System.out.println("removed element by index = " + mylist.remove(20));
         System.out.println("mylist = " + mylist);
 
         mylist.clear();

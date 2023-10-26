@@ -1,4 +1,4 @@
-package collections;
+package collections.Task1;
 
 import java.util.Arrays;
 
@@ -14,6 +14,10 @@ public class MyArrayList<S> {
         size++;
     }
      public S remove(int index) {
+         if (index < 0 || index >= size) {
+             throw new IndexOutOfBoundsException("Incorrect index");
+         }
+
         S removedValue = (S) array[index];
          for (int i = index; i < size - 1; i++) {
              array[i] = array[i + 1];
@@ -36,6 +40,9 @@ public class MyArrayList<S> {
      }
 
      public S get(int index) {
+         if (index < 0 || index >= size) {
+             throw new IndexOutOfBoundsException("Incorrect index");
+         }
         return (S) array[index];
      }
 

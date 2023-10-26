@@ -1,4 +1,4 @@
-package collections;
+package collections.Task2;
 
 public class MyLinkedList <T> {
     private Node<T> last;
@@ -25,6 +25,10 @@ public class MyLinkedList <T> {
         }
 
         public T remove(int index) {
+            if (index < 0 || index >= size) {
+                throw new IndexOutOfBoundsException("Incorrect index");
+            }
+
         T removedValue = null;
         if(index == 0) {
             removedValue = first.value;
@@ -51,11 +55,14 @@ public class MyLinkedList <T> {
         }
 
         public Node<T> get(int index) {
+            if (index < 0 || index >= size) {
+                throw new IndexOutOfBoundsException("Incorrect index");
+            }
+
         Node<T> current = first;
             for (int i = 0; i < index; i++) {
                 current = current.next;
             }
-
             return current;
         }
 
